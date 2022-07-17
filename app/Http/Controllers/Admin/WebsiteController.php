@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\card;
-use App\Models\Header;
-use App\Models\Live;
+use App\Models\header;
+use App\Models\live;
 use App\Models\Country;
 use App\Models\User;
 use App\Models\TableHeaderInformation;
@@ -16,13 +16,13 @@ class WebsiteController extends Controller
 {
     public function header_components()
     {
-        $header = Header::all();
+        $header = header::all();
         return view('admin.website.header_components', compact('header'));
     }
 
     public function save_header_components(Request $request)
     {
-        Header::updateOrCreate(['name' => $request->name], [
+        header::updateOrCreate(['name' => $request->name], [
             'value' => $request->value,
             'info' => $request->info
         ]);
@@ -39,13 +39,13 @@ class WebsiteController extends Controller
 
     public function card_components()
     {
-        $card = Card::all();
+        $card = card::all();
         return view('admin.website.card_components', compact('card'));
     }
 
     public function live_components()
     {
-        $lives = Live::all();
+        $lives = live::all();
         $countries = Country::all();
         return view('admin.website.live_components', compact('countries', 'lives'));
     }
@@ -53,7 +53,7 @@ class WebsiteController extends Controller
     public function save_live_components(Request $request)
     {
         foreach ($request->name as $key => $name) {
-            Live::find($request->id[$key])->update(['value' => $name]);
+            live::find($request->id[$key])->update(['value' => $name]);
         }
         return back()->with("success", "Updated successfully");
     }
@@ -140,7 +140,7 @@ class WebsiteController extends Controller
             'name' => $request->name,
             'email' => $request->email
         ]);
-        
+
         return back()->with("success","User updated successfully");
     }
 }
