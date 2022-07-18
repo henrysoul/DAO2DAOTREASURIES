@@ -7,6 +7,7 @@
     <title>DAO2DAOTREASURIES</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        {{-- <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{asset('assets/css/inks.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
@@ -28,11 +29,11 @@
         <div class="hd-text ms-md-4">
             {{-- <marquee> --}}
                 <P style="min-width: 112.4px;"> <i class="bi bi-info-circle" tabindex="0" data-toggle="tooltip"
-                        data-placement="top" title={{$header->where('name','daos')->first()?->info}} ></i> DAO's: <small
+                        data-placement="top" title="{{$header->where('name','daos')->first()?->info}}" ></i> DAO's: <small
                         style="color: blue;">{{$header->where('name','daos')->first()?->value}}</small></P>
                 <P class="ms-4"> <i class="bi bi-info-circle" tabindex="0" data-toggle="tooltip" data-placement="top"
                         title="{{$header->where('name','drt')->first()?->info}}"></i> Global-DRT: <small
-                        style="color: blue;">Global
+                        style="color: blue;">
                         {{$header->where('name','drt')->first()?->value}}</small></P>
                 <P class="ms-4"> <i class="bi bi-info-circle" tabindex="0" data-toggle="tooltip" data-placement="top"
                         title="{{$header->where('name','golden_no')->first()?->info}}"></i> Golden No: <small

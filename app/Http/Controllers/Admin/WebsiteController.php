@@ -53,7 +53,7 @@ class WebsiteController extends Controller
     public function save_live_components(Request $request)
     {
         foreach ($request->name as $key => $name) {
-            live::find($request->id[$key])->update(['value' => $name]);
+            live::find($request->id[$key])->update(['value' => $name,'country'=>$request->country[$key]]);
         }
         return back()->with("success", "Updated successfully");
     }

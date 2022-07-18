@@ -17,12 +17,30 @@ Live components
                 <form action="{{route('live_components')}}" method="post">
                     @csrf
                     @foreach($lives as $live)
-                    <div class="form-group">
-                        <label class="control-label mb-1">Message</label>
-                        <input name="name[]" value="{{$live->value}}" required class="form-control" aria-required="true"
-                            aria-invalid="false">
-                        <input type="hidden" name="id[]" value="{{$live->id}}">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="control-label mb-1">Message</label>
+                                <input name="name[]" value="{{$live->value}}" required class="form-control"
+                                    aria-required="true" aria-invalid="false">
+                                <input type="hidden" name="id[]" value="{{$live->id}}">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="control-label mb-1">Country</label>
+                                <select name="country[]" id="country" class="form-control" required>
+                                    <option value="">--select--</option>
+                                    @foreach ($countries as $country)
+                                    <option value="{{$country->id}}" {{$live->country == $country->id
+                                        ?'selected':""}}>{{$country->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
                     </div>
+                    <hr>
                     @endforeach
 
                     {{--

@@ -18,7 +18,7 @@
                     </div>
                     <div class="card-body mb-3 px-4 py-2">
                         <div class="col d-flex">
-                            <p>EPOH</p>
+                            <p>EPoH</p>
                             <i class="bi bi-info-circle ms-auto" tabindex="0" data-toggle="tooltip"
                                 data-placement="bottom" title="{{$cards->where('name','epoh')->first()?->info}}"></i>
                         </div>
@@ -84,8 +84,8 @@
                     <div class="card-body mb-3 px-4 pt-2">
                         <div class="col d-flex">
                             <div>
-                                <p>Distributed reserve Stablecoin</p>
-                                <p style="margin-top: -18px"><small>(Uiversal Basic Income Dollar)</small></p>
+                                <p>Distributed Reserve Stablecoin</p>
+                                <p style="margin-top: -18px"><small>(Universal Basic Income Dollar)</small></p>
                             </div>
                             <i class="bi bi-info-circle ms-auto" tabindex="0" data-toggle="tooltip"
                                 data-placement="bottom" title="{{$cards->where('name','dsrc')->first()?->info}}"></i>
@@ -133,7 +133,12 @@
                         <a href="#"> Live</a>
                     </div>
                     @foreach ($lives as $live )
-                    <p>{{$live->value}}</p>
+                    <p>
+                        <span>{{$live->value}}</span> @foreach ($countries as $country )
+                        @if($country->id==$live->country)<span
+                            class="{{'flag-icon flag-icon-'.strtolower($country->iso2).' flag-icon-squared'}}"></span>@endif
+                        @endforeach
+                    </p>
                     @endforeach
 
                 </div>
@@ -151,7 +156,7 @@
                 <thead class="table-bordered">
                     <tr>
                         <th scope="col" class="stickyTop">#</th>
-                        <th scope="col" class="stickyTop">Inkerested&nbspDAO&nbsp<i class="bi bi-info-circle"
+                        <th scope="col" class="stickyTop">Federated&nbspDAO&nbsp<i class="bi bi-info-circle"
                                 tabindex="0" data-toggle="tooltip" data-placement="bottom"
                                 title="{{$headerInfo->where('name','inkrested')->first()?->value}}"></i></th>
                         <th scope="col" class="stickyTop">EPoH/VPoH&nbsp<i class="bi bi-info-circle" tabindex="0"

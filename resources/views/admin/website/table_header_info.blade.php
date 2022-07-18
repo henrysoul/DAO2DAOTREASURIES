@@ -11,7 +11,7 @@ Table Header info
     <div class="col-lg-6">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">Inkrested DAO</strong>
+                <strong class="card-title">Federated DAO</strong>
             </div>
             <div class="card-body">
                 <form action="{{route('header_info')}}" method="post">

@@ -22,7 +22,7 @@ Table components
                             <thead class="table-bordered">
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Inkerested DAO <i class="bi bi-info-circle"></i></th>
+                                    <th scope="col">Federated DAO <i class="bi bi-info-circle"></i></th>
                                     <th scope="col">EPoH/VPoH <i class="bi bi-info-circle"></i></th>
                                     {{-- <th scope="col">% of Total <i class="bi bi-info-circle"></i></th> --}}
                                     <th scope="col">HATA <i class="bi bi-info-circle"></i></th>

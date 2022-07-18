@@ -5,7 +5,7 @@
         <span class="{{'flag-icon flag-icon-'.strtolower($country->iso2).' flag-icon-squared flag-icon-lg'}}" style="font-size:50px"></span>
         <div class="row pt-5 g-4 ">
             <div class="col-md-4"> <b>Inkerested DAO: </b>{{$country->name}}</div>
-            <div class="col-md-4"> <b>EPoH/VPoH: </b>{{$country->population}}</div>
+            <div class="col-md-4"> <b>EPoH/VPoH: </b>{{number_format($country->population,2)}}</div>
             <div class="col-md-4"> <b>%Total: </b>{{number_format(($country->population/$countriesPopulation)* 100,3)}}
             </div>
         </div>
