@@ -111,7 +111,7 @@ Table Header info
     <div class="col-lg-6">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">Hcda</strong>
+                <strong class="card-title">Hdca</strong>
             </div>
             <div class="card-body">
                 <form action="{{route('header_info')}}" method="post">
@@ -186,7 +186,7 @@ Table Header info
     <div class="col-lg-6">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">DRT</strong>
+                <strong class="card-title">NWT</strong>
             </div>
             <div class="card-body">
                 <form action="{{route('header_info')}}" method="post">
@@ -211,7 +211,7 @@ Table Header info
     <div class="col-lg-6">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">DRT per capital</strong>
+                <strong class="card-title">Treasuries</strong>
             </div>
             <div class="card-body">
                 <form action="{{route('header_info')}}" method="post">

@@ -24,7 +24,7 @@ class WebsiteController extends Controller
 
     public function country_info($id)
     {
-        $country = Country::find($id)->first();
+        $country = Country::find($id);
         $header = header::all();
         $headerInfo = TableHeaderInformation::all();
         $countriesPopulation = Country::sum('population');

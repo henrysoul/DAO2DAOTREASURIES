@@ -26,11 +26,11 @@ Table components
                                     <th scope="col">EPoH/VPoH <i class="bi bi-info-circle"></i></th>
                                     {{-- <th scope="col">% of Total <i class="bi bi-info-circle"></i></th> --}}
                                     <th scope="col">HATA <i class="bi bi-info-circle"></i></th>
-                                    <th scope="col">HCDA <i class="bi bi-info-circle"></i></th>
+                                    <th scope="col">HDCA <i class="bi bi-info-circle"></i></th>
                                     <th scope="col">N-HATA <i class="bi bi-info-circle"></i></th>
+                                    <th scope="col">NWT <i class="bi bi-info-circle"></i></th>
                                     <th scope="col">Liquidity <i class="bi bi-info-circle"></i></th>
-                                    <th scope="col">DRT <i class="bi bi-info-circle"></i></th>
-                                    <th scope="col">DRT per capital <i class="bi bi-info-circle"></i></th>
+                                    <th scope="col">Treasuries <i class="bi bi-info-circle"></i></th>
                                     <th scope="col">IDAO <i class="bi bi-info-circle"></i></th>
 
                                 </tr>
@@ -49,12 +49,13 @@ Table components
                                     {{-- <td class="text-success">%<input name="percentage[]"
                                             value="{{$country->percentage}}" ></td> --}}
                                     <td>hata<input name="hata[]" value="{{$country->hata}}" ></td>
-                                    <td>hcda<input name="hcda[]" value="{{$country->hcda}}" ></td>
+                                    <td>hdca<input name="hcda[]" value="{{$country->hcda}}" ></td>
                                     <td>nhata<input name="nhata[]" value="{{$country->nhata}}" ></td>
+                                   
+                                    <td>nwt<input name="drt[]" value="{{$country->drt}}" ></td>
                                     <td>liquidity<input name="liquidity[]" value="{{$country->liquidity}}" >
                                     </td>
-                                    <td>drt<input name="drt[]" value="{{$country->drt}}" ></td>
-                                    <td>drt per capital<input name="drtpercapital[]" value="{{$country->drtpercapital}}"
+                                    <td>treasuries<input name="drtpercapital[]" value="{{$country->drtpercapital}}"
                                             ></td>
                                     <td>idao<input name="idao[]" value="{{$country->idao}}" ></td>
                                     <input type="hidden" name="id[]" value="{{$country->id}}"/>

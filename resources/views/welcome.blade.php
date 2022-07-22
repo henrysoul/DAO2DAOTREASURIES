@@ -18,7 +18,7 @@
                     </div>
                     <div class="card-body mb-3 px-4 py-2">
                         <div class="col d-flex">
-                            <p>EPoH</p>
+                            <p>VPoH/EPoH</p>
                             <i class="bi bi-info-circle ms-auto" tabindex="0" data-toggle="tooltip"
                                 data-placement="bottom" title="{{$cards->where('name','epoh')->first()?->info}}"></i>
                         </div>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="card-body mb-3 px-4 py-2">
                         <div class="col d-flex">
-                            <p>VPoH</p>
+                            <p>Treasuries Per Capital</p>
                             <i class="bi bi-info-circle ms-auto" tabindex="0" data-toggle="tooltip"
                                 data-placement="bottom" title="{{$cards->where('name','vpoh')->first()?->info}}"></i>
                         </div>
@@ -119,7 +119,10 @@
     <div class="container mt-5">
         <div class="card-fluid countries  mx-auto">
             <div class="card-body">
-                <div class="scrollable text-center py-4">
+                <div class="scrollable-hd">
+                    <p class="text-center fw-bold pt-1">HATONOMICS </p>
+                </div>
+                <div class="scrollable text-center py-5">
                     <div class="r-circle">
                         <img src="assets/images/r-circle.png" alt="" class="r_img">
 
@@ -159,7 +162,7 @@
                         <th scope="col" class="stickyTop">Federated&nbspDAO&nbsp<i class="bi bi-info-circle"
                                 tabindex="0" data-toggle="tooltip" data-placement="bottom"
                                 title="{{$headerInfo->where('name','inkrested')->first()?->value}}"></i></th>
-                        <th scope="col" class="stickyTop">EPoH/VPoH&nbsp<i class="bi bi-info-circle" tabindex="0"
+                        <th scope="col" class="stickyTop">VPoH/EPoH&nbsp<i class="bi bi-info-circle" tabindex="0"
                                 data-toggle="tooltip" data-placement="bottom"
                                 title="{{$headerInfo->where('name','epoh')->first()?->value}}"></i></th>
                         <th scope="col" class="stickyTop">%&nbspof&nbspTotal <i class="bi bi-info-circle" tabindex="0"
@@ -168,20 +171,21 @@
                         <th scope="col" class="stickyTop">HATA <i class="bi bi-info-circle" tabindex="0"
                                 data-toggle="tooltip" data-placement="bottom"
                                 title="{{$headerInfo->where('name','hata')->first()?->value}}"></i></th>
-                        <th scope="col" class="stickyTop">HCDA <i class="bi bi-info-circle" tabindex="0"
+                        <th scope="col" class="stickyTop">HDCA <i class="bi bi-info-circle" tabindex="0"
                                 data-toggle="tooltip" data-placement="bottom"
                                 title="{{$headerInfo->where('name','hcda')->first()?->value}}"></i></th>
                         <th scope="col" class="stickyTop">N&nbsp-&nbspHATA <i class="bi bi-info-circle" tabindex="0"
                                 data-toggle="tooltip" data-placement="bottom"
                                 title="{{$headerInfo->where('name','nhata')->first()?->value}}"></i></th>
+                        <th scope="col" class="stickytTop">NWT <i class="bi bi-info-circle" tabindex="0"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="{{$headerInfo->where('name','drt')->first()?->value}}"></i></th>
                         <th scope="col" class="stickyTop">Liquidity <i class="bi bi-info-circle" tabindex="0"
                                 data-toggle="tooltip" data-placement="bottom"
                                 title="{{$headerInfo->where('name','liquidity')->first()?->value}}"></i></th>
-                        <th scope="col" class="stickytTop">DRT <i class="bi bi-info-circle" tabindex="0"
+
+                        <th scope="col" class="stickyTop">Treasuries<i class="bi bi-info-circle" tabindex="0"
                                 data-toggle="tooltip" data-placement="bottom"
-                                title="{{$headerInfo->where('name','drt')->first()?->value}}"></i></th>
-                        <th scope="col" class="stickyTop">DRT&nbspper&nbspcapital <i class="bi bi-info-circle"
-                                tabindex="0" data-toggle="tooltip" data-placement="bottom"
                                 title="{{$headerInfo->where('name','drtpercapital')->first()?->value}}"></i>
                         </th>
                         <th scope="col" class="stickyTop">IDAO <i class="bi bi-info-circle" tabindex="0"
@@ -230,11 +234,11 @@
                             {{number_format($country->nhata)}}
                         </td>
                         <td>
-                            {{number_format($country->liquidity)}}
-                        </td>
-                        <td>
                             ${{number_format($country->drt)}}
 
+                        </td>
+                        <td>
+                            {{number_format($country->liquidity)}}
                         </td>
                         <td>
                             ${{number_format($country->drtpercapital)}}

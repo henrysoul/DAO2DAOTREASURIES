@@ -41,14 +41,14 @@ Header components
     <div class="col-lg-6">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">DRT</strong>
+                <strong class="card-title">Global Treasuries</strong>
             </div>
             <div class="card-body">
                 <form action="{{route('header_components')}}" method="post">
                     @csrf
 
                     <div class="form-group">
-                        <label class="control-label mb-1">DRT</label>
+                        <label class="control-label mb-1">Global Treasuries</label>
                         <input name="value" type="text" value="{{$header->where('name','drt')->first()?->value}}"
                             required class="form-control" aria-required="true" aria-invalid="false">
                         <input name="name" value="drt" type="hidden" class="form-control" aria-required="true"

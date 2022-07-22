@@ -35,7 +35,6 @@ body{
 }
 
 .hd-text{
-    display: flex;
     overflow-x: auto;
     cursor: pointer;
    
@@ -46,10 +45,14 @@ body{
 }
 
 
+/* .hd-text_scroll{
+    min-width: 100vw;
+} */
 
-.hd-text p{
-    min-width: 205px;
-    margin-bottom: 0px;
+.hd-note{
+    align-items: baseline;
+
+   
 }
 
 
@@ -86,7 +89,9 @@ body{
     width:45%;
 }
 
-
+.countries{
+    position: relative;
+}
 
 .scrollable{
     background-color: var(--light-pink);
@@ -137,6 +142,21 @@ body{
     font-size: 14px;
     line-height: 18px;
 }
+
+.scrollable-hd{
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: pink;
+    border: 1px solid var(--light-pink);
+    position: absolute;
+    z-index: 1;
+    left: 40%;
+    top: -10px;
+
+}
+
+
 
 
 
@@ -200,6 +220,37 @@ footer a:hover{
 
 
 
+@media (max-width: 1385px){
+    .scrollable-hd{
+        left: 38%;
+    
+    }
+
+}
+
+
+
+
+@media (max-width: 1385px){
+    .scrollable-hd{
+        left: 37%;
+
+    }
+
+}
+
+
+
+@media (max-width: 990px){
+    .scrollable-hd{
+        left: 32%;
+
+}
+
+}
+
+
+
 @media (max-width: 768px) {
     
     .header{
@@ -207,32 +258,57 @@ footer a:hover{
     }
 
     .logo_img{
+        /* margin-top: -18px; */
         width: 30px;
     }
 
     .logo{
         border-bottom: 1px solid var(--ink-pink);
-        padding-bottom: 15px;
     }
     
-    .logo a{
+    .logo p{
         font-size: 20px;
     }
     
     .hd-text{
         margin-top:10px;
     }
+
+    .hd-text_scroll{
+        min-width: fill;
+    }
+
+    .hd-note p{
+        font-size: 14px;
+    }
    
     
     .data{
-        margin-top: 120px;
+        margin-top: 150px;
     }
 
+    .scrollable-hd{
+        width: 280px;
+        left: 29%;
+    
+    }
+
+        
     .live{
         position: static;
+        margin-top: -10px;
         margin-bottom: 20px;
-    }
+        display:none;
         
+    }
+
+    .live img{
+        width: 18px;
+    }
+
+    .live a{
+        font-size: 12px;
+    }
 
     .table-responsive::-webkit-scrollbar{
         margin: 0;
@@ -252,4 +328,92 @@ footer a:hover{
         padding: 0px;
     }
 
+}
+
+
+
+@media (max-width: 766px) {
+    .scrollable-hd{
+        left: 22%;
+    
+    }
+    
+}
+
+
+
+@media (max-width: 540px) {
+    .scrollable-hd{
+        left: 20%;
+    
+    }
+    
+}
+
+
+
+@media (max-width: 429px) {
+    .scrollable-hd{
+        left: 18%;
+    
+    }
+    
+}
+
+
+@media (max-width: 414px) {
+    .scrollable-hd{
+        left: 14%;
+    
+    }
+    
+}
+
+
+
+
+
+@media (max-width: 375px) {
+    .scrollable-hd{
+        width: 220px;
+        left: 18%;
+    
+    }
+    
+}
+
+
+@media (max-width: 320px) {
+    .scrollable-hd{
+        left: 19%;
+        width: 180px;
+    
+    }
+    
+}
+
+
+
+@media (max-width: 280px) {
+    .scrollable-hd{
+        left: 16%;
+        
+    
+    }
+    
+}
+
+
+
+
+@media (max-width: 185px) {
+    .data{
+        margin-top: 270px;
+    }
+
+    .scrollable-hd{
+        left: 19%;
+        width: 50px;
+    
+    }
 }

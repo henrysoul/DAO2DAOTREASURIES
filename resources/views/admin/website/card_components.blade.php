@@ -11,14 +11,14 @@ Card components
     <div class="col-lg-6">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">EPoH</strong>
+                <strong class="card-title">EPoH/VPoH</strong>
             </div>
             <div class="card-body">
                 <form action="{{route('card_components')}}" method="post">
                     @csrf
 
                     <div class="form-group">
-                        <label class="control-label mb-1">EPoH</label>
+                        <label class="control-label mb-1">EPoH/VPoH</label>
                         <input name="value" type="text"
                             value="{{$card->where('name','epoh')->first()?->value}}" required
                             class="form-control" aria-required="true" aria-invalid="false">
@@ -74,14 +74,14 @@ Card components
     <div class="col-lg-6">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">VPoH</strong>
+                <strong class="card-title">Treasuries Per Capital</strong>
             </div>
             <div class="card-body">
                 <form action="{{route('card_components')}}" method="post">
                     @csrf
 
                     <div class="form-group">
-                        <label class="control-label mb-1">VPoH</label>
+                        <label class="control-label mb-1">Treasuries Per Capital</label>
                         <input name="value" type="text"
                             value="{{$card->where('name','vpoh')->first()?->value}}" required
                             class="form-control" aria-required="true" aria-invalid="false">
