@@ -31,16 +31,18 @@
             {{-- <marquee> --}}
                 <div class="container-fluid hd-text_scroll d-flex pt-md-3">
                     <div class="hd-note d-flex">
-                        <P style="min-width: 69.3px"> <i class="bi bi-info-circle" tabindex="0" data-toggle="tooltip" data-placement="top"
-                                title="{{$header->where('name','daos')->first()?->info}}"></i> DAO's:
+                        <P style="min-width: 69.3px"> <i class="bi bi-info-circle" tabindex="0" data-bs-toggle="tooltip"
+                                data-bs-placement="top" title="{{$header->where('name','daos')->first()?->info}}"></i>
+                            DAO's:
                         </P>
                         <small class="ms-1" style="color: blue;">{{$header->where('name','daos')->first()?->value}}
                         </small>
                     </div>
 
                     <div class="hd-note d-flex">
-                        <P class="ms-4"  style="min-width: 162.3px"> <i class="bi bi-info-circle" tabindex="0" data-toggle="tooltip"
-                                data-placement="top" title="{{$header->where('name','drt')->first()?->info}}"></i>
+                        <P class="ms-4" style="min-width: 162.3px"> <i class="bi bi-info-circle" tabindex="0"
+                                data-toggle="tooltip" data-placement="top"
+                                title="{{$header->where('name','drt')->first()?->info}}"></i>
                             Global Treasuries:
                         </P>
                         <small class="ms-1" style="color: blue;">
@@ -49,8 +51,9 @@
                     </div>
 
                     <div class="hd-note d-flex">
-                        <P class="ms-4"  style="min-width: 107.1px"> <i class="bi bi-info-circle" tabindex="0" data-toggle="tooltip"
-                                data-placement="top" title="{{$header->where('name','golden_no')->first()?->info}}"></i>
+                        <P class="ms-4" style="min-width: 107.1px"> <i class="bi bi-info-circle" tabindex="0"
+                                data-toggle="tooltip" data-placement="top"
+                                title="{{$header->where('name','golden_no')->first()?->info}}"></i>
                             Golden No:
                         </P>
                         <small class="ms-1" style="color: blue;">{{$header->where('name','golden_no')->first()?->value}}
@@ -84,14 +87,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="inks.js"></script>
     <script type="text/javascript">
-        (function () {
-            // $('[data-toggle="tooltip"]').tooltip()
-            document.querySelectorAll('bi-info-circle').foreach((el)=>{
-                el.addEventListener('click',()=>{el.tooltip();});
+        (function() {
+        // $('[data-toggle="tooltip"]').tooltip()
+         document.querySelectorAll('.bi-info-circle').forEach((el)=>{
+                var tooltip = bootstrap.Tooltip.getOrCreateInstance(el);
+                el.addEventListener('click',()=>{
+                    // tooltip.('toggle');
+                });
             });
-        })
+
+        })();
     </script>
     @yield('footer')
 </body>
