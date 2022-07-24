@@ -184,7 +184,7 @@
                                 data-toggle="tooltip" data-placement="bottom"
                                 title="{{$headerInfo->where('name','liquidity')->first()?->value}}"></i></th>
 
-                        <th scope="col" class="stickyTop">Treasuries<i class="bi bi-info-circle" tabindex="0"
+                        <th scope="col" class="stickyTop">Treasuries <i class="bi bi-info-circle" tabindex="0"
                                 data-toggle="tooltip" data-placement="bottom"
                                 title="{{$headerInfo->where('name','drtpercapital')->first()?->value}}"></i>
                         </th>
